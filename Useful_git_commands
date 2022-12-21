@@ -1,3 +1,6 @@
-$ php artisan migrate:fresh --seed // Erstellung einer Kopie einer Datenbank
+$ php artisan migrate:fresh --seed // Erstellung einer Kopie der Datenbank
+
+
+In den "filament-airport" gehen
 $ php artisan serve // stertet den Server
 

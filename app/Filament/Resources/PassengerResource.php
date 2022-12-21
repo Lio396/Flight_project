@@ -36,7 +36,6 @@ class PassengerResource extends Resource
                 Tables\Columns\TextColumn::make('id')->getStateUsing(
                     function ($record){
                         return FlightCollisionDetector::run($record);
-
                     }
                 ),
             ])

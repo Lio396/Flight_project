@@ -27,7 +27,6 @@ class FlightResource extends Resource
                 Forms\Components\Select::make('airplane_id')->relationship('airplane', 'typ'),
                 Forms\Components\Select::make('start_airport_id')->relationship('start', 'short_name'),
                 Forms\Components\Select::make('end_airport_id')->relationship('end', 'short_name'),
-
                 Forms\Components\DatePicker::make('departure_date'),
                 Forms\Components\DatePicker::make('arrival_date'),
                 Forms\Components\Toggle::make('ready'),

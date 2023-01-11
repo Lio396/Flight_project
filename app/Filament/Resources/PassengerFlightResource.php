@@ -20,33 +20,27 @@ class PassengerFlightResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
     public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                Forms\Components\Select::make('passenger_id')->relationship('passenger', 'email'),
-                Forms\Components\Select::make('flight_id')->relationship('flight', 'number'),
-            ]);
-    }
+{
+    return $form
+        ->schema([
+            Forms\Components\Select::make('passenger_id')->relationship('passenger', 'email'),
+            Forms\Components\Select::make('flight_id')->relationship('flight', 'number'),
+        ]);
+}
 
-    public static function table(Table $table): Table
-    {
-        return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('passenger.email'),
-                Tables\Columns\TextColumn::make('flight.number')->label('Flight Number'),
-                Tables\Columns\TextColumn::make('flight.start.short_name')->label('Start airport'),
-                Tables\Columns\TextColumn::make('flight.end.short_name')->label('End airport'),
-            ])
-            ->filters([
-                //
-            ])
-            ->actions([
-                Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
-            ]);
-    }
+public static function table(Table $table): Table
+{
+    return $table
+        ->columns([
+            Tables\Columns\TextColumn::make('passenger.email'),
+            Tables\Columns\TextColumn::make('flight.number')->label('Flight Number'),
+            Tables\Columns\TextColumn::make('flight.start.short_name')->label('Start airport'),
+            Tables\Columns\TextColumn::make('flight.end.short_name')->label('End airport'),
+        ])
+        ->filters([
+
+        ]);
+}
     
     public static function getRelations(): array
     {

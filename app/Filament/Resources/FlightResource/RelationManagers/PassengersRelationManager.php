@@ -16,6 +16,8 @@ class PassengersRelationManager extends RelationManager
 
     protected static ?string $recordTitleAttribute = 'email';
 
+    protected bool $allowsDuplicates = false;
+
     public static function form(Form $form): Form
     {
         return $form
@@ -36,7 +38,7 @@ class PassengersRelationManager extends RelationManager
                 //
             ])
             ->headerActions([
-                Tables\Actions\AttachAction::make()->preloadRecordSelect(),
+                Tables\Actions\AttachAction::make(),
             ])
             ->actions([
                 Tables\Actions\DetachAction::make(),
@@ -44,5 +46,5 @@ class PassengersRelationManager extends RelationManager
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
-    }
+    }    
 }

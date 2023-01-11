@@ -17,6 +17,7 @@ class Flight extends Model
         'departure_date',
         'arrival_date',
         'ready',
+        'status',
     ];
 
     public $dates = [
@@ -39,7 +40,6 @@ class Flight extends Model
     public function comments(){
         return $this->morphMany(config('comments.comment_class'), 'commentable');
     }
-
     public function passengers(){
         return $this->belongsToMany(Passenger::class,'passenger_flight');
     }

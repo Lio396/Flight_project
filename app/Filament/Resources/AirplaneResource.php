@@ -23,7 +23,7 @@ class AirplaneResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('typ')->required(),
+                //
             ]);
     }
 
@@ -31,7 +31,7 @@ class AirplaneResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('typ'),
+                //
             ])
             ->filters([
                 //

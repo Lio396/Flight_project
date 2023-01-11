@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Airport extends Model
 {
+
     use HasFactory;
 
     public $fillable = ['name','short_name'];

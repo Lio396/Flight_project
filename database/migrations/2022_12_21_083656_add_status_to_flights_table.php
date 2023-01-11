@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::table('flights', function (Blueprint $table) {
             $table->string('status')
-                ->after('id')
-                ->nullable();
+            ->after('id')
+            ->nullable();
         });
     }
 
